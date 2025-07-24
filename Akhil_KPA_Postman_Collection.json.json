@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "44277a29-67f2-4e29-b498-8387ba50bc6c",
+		"name": "Akhil_postman_collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41730100"
+	},
+	"item": [
+		{
+			"name": "Get Wheel Specifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"wheel-specifications"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forms",
+								"wheel-specifications"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Thu, 24 Jul 2025 07:22:42 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "376"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"wheel_number\": \"W123\",\n        \"diameter\": 850,\n        \"condition\": \"Good\",\n        \"checked_by\": \"Inspector A\"\n    },\n    {\n        \"id\": 3,\n        \"wheel_number\": \"W001\",\n        \"diameter\": 850,\n        \"condition\": \"Good\",\n        \"checked_by\": \"Inspector A\"\n    },\n    {\n        \"id\": 4,\n        \"wheel_number\": \"W002\",\n        \"diameter\": 851,\n        \"condition\": \"Average\",\n        \"checked_by\": \"Inspector 2\"\n    },\n    {\n        \"id\": 5,\n        \"wheel_number\": \"W003\",\n        \"diameter\": 852,\n        \"condition\": \"Not Good\",\n        \"checked_by\": \"Inspector 2\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create Bogie Checksheet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"form_type\": \"Bogie C\",\r\n  \"workshop_name\": \"Perambur\",\r\n  \"coach_type\": \"AC\",\r\n  \"coach_number\": \"67890\",\r\n  \"bogie_number\": \"B003\",\r\n  \"date\": \"2025-07-22\",\r\n  \"remarks\": \"Third test entry\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forms/bogie-checksheet",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"bogie-checksheet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"form_type\": \"Bogie C\",\r\n  \"workshop_name\": \"Perambur\",\r\n  \"coach_type\": \"AC\",\r\n  \"coach_number\": \"67890\",\r\n  \"bogie_number\": \"B003\",\r\n  \"date\": \"2025-07-22\",\r\n  \"remarks\": \"Third test entry\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/forms/bogie-checksheet",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forms",
+								"bogie-checksheet"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Thu, 24 Jul 2025 07:22:36 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "169"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"form_type\": \"Bogie C\",\n    \"workshop_name\": \"Perambur\",\n    \"coach_type\": \"AC\",\n    \"coach_number\": \"67890\",\n    \"bogie_number\": \"B003\",\n    \"date\": \"2025-07-22\",\n    \"remarks\": \"Third test entry\",\n    \"id\": 4\n}"
+				}
+			]
+		}
+	]
+}
